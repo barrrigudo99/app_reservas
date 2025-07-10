@@ -1,0 +1,201 @@
+[ {
+  "id" : 6,
+  "campoId" : 1,
+  "campoNombre" : "Adelfas",
+  "usuarioId" : 1,
+  "usuarioNombre" : "carlos99",
+  "fecha" : "2033-05-16",
+  "horaInicio" : "16:00:00",
+  "horaFin" : "17:00:00",
+  "estado" : "pendiente"
+}, {
+  "id" : 7,
+  "campoId" : 1,
+  "campoNombre" : "Adelfas",
+  "usuarioId" : 1,
+  "usuarioNombre" : "carlos99",
+  "fecha" : "2025-05-16",
+  "horaInicio" : "16:00:00",
+  "horaFin" : "17:00:00",
+  "estado" : "pendiente"
+}, {
+  "id" : 9,
+  "campoId" : 1,
+  "campoNombre" : "Adelfas",
+  "usuarioId" : 1,
+  "usuarioNombre" : "carlos99",
+  "fecha" : "2038-05-16",
+  "horaInicio" : "10:30:00",
+  "horaFin" : "11:30:00",
+  "estado" : "pendiente"
+}, {
+  "id" : 10,
+  "campoId" : 1,
+  "campoNombre" : "Adelfas",
+  "usuarioId" : 1,
+  "usuarioNombre" : "carlos99",
+  "fecha" : "2025-05-18",
+  "horaInicio" : "19:30:00",
+  "horaFin" : "20:30:00",
+  "estado" : "pendiente"
+}, {
+  "id" : 11,
+  "campoId" : 1,
+  "campoNombre" : "Adelfas",
+  "usuarioId" : 1,
+  "usuarioNombre" : "carlos99",
+  "fecha" : "2025-05-21",
+  "horaInicio" : "14:30:00",
+  "horaFin" : "15:30:00",
+  "estado" : "pendiente"
+}, {
+  "id" : 12,
+  "campoId" : 1,
+  "campoNombre" : "Adelfas",
+  "usuarioId" : 1,
+  "usuarioNombre" : "carlos99",
+  "fecha" : "2025-05-25",
+  "horaInicio" : "08:30:00",
+  "horaFin" : "09:30:00",
+  "estado" : "pendiente"
+}, {
+  "id" : 13,
+  "campoId" : 1,
+  "campoNombre" : "Adelfas",
+  "usuarioId" : 1,
+  "usuarioNombre" : "carlos99",
+  "fecha" : "2025-05-21",
+  "horaInicio" : "14:30:00",
+  "horaFin" : "15:30:00",
+  "estado" : "pendiente"
+}, {
+  "id" : 14,
+  "campoId" : 1,
+  "campoNombre" : "Adelfas",
+  "usuarioId" : 1,
+  "usuarioNombre" : "carlos99",
+  "fecha" : "2025-05-25",
+  "horaInicio" : "08:30:00",
+  "horaFin" : "09:30:00",
+  "estado" : "pendiente"
+}, {
+  "id" : 15,
+  "campoId" : 1,
+  "campoNombre" : "Adelfas",
+  "usuarioId" : 1,
+  "usuarioNombre" : "carlos99",
+  "fecha" : "2025-05-25",
+  "horaInicio" : "09:30:00",
+  "horaFin" : "10:30:00",
+  "estado" : "pendiente"
+}, {
+  "id" : 16,
+  "campoId" : 1,
+  "campoNombre" : "Adelfas",
+  "usuarioId" : 1,
+  "usuarioNombre" : "carlos99",
+  "fecha" : "2025-05-25",
+  "horaInicio" : "10:30:00",
+  "horaFin" : "11:30:00",
+  "estado" : "pendiente"
+}, {
+  "id" : 17,
+  "campoId" : 1,
+  "campoNombre" : "Adelfas",
+  "usuarioId" : 1,
+  "usuarioNombre" : "carlos99",
+  "fecha" : "2025-05-20",
+  "horaInicio" : "16:30:00",
+  "horaFin" : "17:30:00",
+  "estado" : "pendiente"
+}, {
+  "id" : 18,
+  "campoId" : 1,
+  "campoNombre" : "Adelfas",
+  "usuarioId" : 1,
+  "usuarioNombre" : "carlos99",
+  "fecha" : "2025-05-25",
+  "horaInicio" : "18:30:00",
+  "horaFin" : "19:30:00",
+  "estado" : "pendiente"
+}, {
+  "id" : 19,
+  "campoId" : 1,
+  "campoNombre" : "Adelfas",
+  "usuarioId" : 1,
+  "usuarioNombre" : "carlos99",
+  "fecha" : "2025-05-25",
+  "horaInicio" : "19:30:00",
+  "horaFin" : "20:30:00",
+  "estado" : "pendiente"
+}, {
+  "id" : 20,
+  "campoId" : 1,
+  "campoNombre" : "Adelfas",
+  "usuarioId" : 1,
+  "usuarioNombre" : "carlos99",
+  "fecha" : "2025-05-25",
+  "horaInicio" : "20:30:00",
+  "horaFin" : "21:30:00",
+  "estado" : "pendiente"
+}, {
+  "id" : 21,
+  "campoId" : 1,
+  "campoNombre" : "Adelfas",
+  "usuarioId" : 1,
+  "usuarioNombre" : "carlos99",
+  "fecha" : "2025-05-28",
+  "horaInicio" : "15:30:00",
+  "horaFin" : "16:30:00",
+  "estado" : "pendiente"
+}, {
+  "id" : 22,
+  "campoId" : 1,
+  "campoNombre" : "Adelfas",
+  "usuarioId" : 1,
+  "usuarioNombre" : "carlos99",
+  "fecha" : "2025-06-13",
+  "horaInicio" : "13:30:00",
+  "horaFin" : "14:30:00",
+  "estado" : "pendiente"
+}, {
+  "id" : 23,
+  "campoId" : 1,
+  "campoNombre" : "Adelfas",
+  "usuarioId" : 1,
+  "usuarioNombre" : "carlos99",
+  "fecha" : "2025-06-13",
+  "horaInicio" : "14:30:00",
+  "horaFin" : "15:30:00",
+  "estado" : "pendiente"
+}, {
+  "id" : 24,
+  "campoId" : 1,
+  "campoNombre" : "Adelfas",
+  "usuarioId" : 1,
+  "usuarioNombre" : "carlos99",
+  "fecha" : "2025-06-10",
+  "horaInicio" : "09:30:00",
+  "horaFin" : "10:30:00",
+  "estado" : "pendiente"
+}, {
+  "id" : 25,
+  "campoId" : 1,
+  "campoNombre" : "Adelfas",
+  "usuarioId" : 1,
+  "usuarioNombre" : "carlos99",
+  "fecha" : "2025-06-10",
+  "horaInicio" : "16:30:00",
+  "horaFin" : "17:30:00",
+  "estado" : "pendiente"
+}, {
+  "id" : 26,
+  "campoId" : 1,
+  "campoNombre" : "Adelfas",
+  "usuarioId" : 1,
+  "usuarioNombre" : "carlos99",
+  "fecha" : "2025-06-10",
+  "horaInicio" : "09:30:00",
+  "horaFin" : "10:30:00",
+  "estado" : "pendiente"
+} ]

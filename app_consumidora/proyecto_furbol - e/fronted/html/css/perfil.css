@@ -1,0 +1,91 @@
+:root {
+    --main-bg: #0a0a23;
+    --accent-color: #17c964;
+    --text-color: #ffffff;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--main-bg);
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+  }
+
+  .container {
+    width: fit-content;
+    margin: 50px auto;
+    background: #111132;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: var(--accent-color);
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    background-color: #1b1b3a;
+    border: 1px solid var(--accent-color);
+    border-radius: 6px;
+    color: var(--text-color);
+  }
+
+  .profile-pic {
+    display: block;
+    margin: 10px auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent-color);
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--accent-color);
+    color: #000;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #12a150;
+  }
+
+  .section h5 {
+    margin: 0;
+    padding: 0.5rem;
+    background-color: #000000;
+    cursor: pointer;
+    border-radius: 5px;
+    color: var(--accent-color);
+}
+
+  editar-perfil {
+    display: block;
+    margin-top: 20px;
+  }

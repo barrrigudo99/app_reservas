@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Perfil del Usuario</title>
+</head>
+<body>
+    <h2>Perfil del Usuario</h2>
+    <div id="user-info">
+        Cargando información del usuario...
+    </div>
+
+    <button onclick="logout()">Cerrar Sesión</button>
+
+    <script>
+        async function loadUserInfo() {
+            const token = localStorage.getItem("token");
+            if (!token) {
+                alert("Por favor, inicia sesión primero.");
+                window.location.href = "login.html";
+                return;
+            }
+
+            try {
+                const response = await fetch("http://localhost:8081/auth/validate", {
+                    method: "GET",
+                    headers: {
+                        "Authorization": "Bearer " + token
+                    }
+                });
+
+                if (!response.ok) {
+                    const error = await response.text();
+                    alert("Error: " + error);
+                    localStorage.removeItem("token");
+                    window.location.href = "login.html";
+                    return;
+                }
+
+                const user = await response.json();
+                document.getElementById("user-info").innerHTML = `
+                    <p><strong>Nombre:</strong> ${user.nombre}</p>
+                    <p><strong>Email:</strong> ${user.email}</p>
+                    <p><strong>Rol:</strong> ${user.rol}</p>
+                `;
+            } catch (error) {
+                console.error("Error de conexión:", error);
+                alert("Error al conectar con el servidor.");
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem("token");
+            window.location.href = "login.html";
+        }
+
+        loadUserInfo();
+    </script>
+</body>
+</html>

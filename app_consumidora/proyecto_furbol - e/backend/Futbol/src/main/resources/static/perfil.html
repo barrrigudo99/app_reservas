@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Editar Perfil</title>
+  <link rel="stylesheet" href="css/perfil.css">
+
+
+
+
+  
+</head>
+
+<body>
+
+  <custom-navbar> </custom-navbar>
+
+
+  <div class="container">
+    <h2>Editar Perfil</h2>
+    <form>
+      <img src="default-avatar.png" alt="Foto de perfil" class="profile-pic" id="preview">
+      <div class="form-group">
+        <label for="profile-pic">Cambiar foto</label>
+        <input type="file" id="profile-pic" accept="image/*" onchange="previewImage(event)">
+      </div>
+
+      <!-- Componente del modal insertado -->
+      <editar-perfil></editar-perfil>
+
+      <button type="submit">Guardar cambios</button>
+    </form>
+  </div>
+
+  <script>
+    function previewImage(event) {
+      const reader = new FileReader();
+      reader.onload = function () {
+        const preview = document.getElementById('preview');
+        preview.src = reader.result;
+      }
+      reader.readAsDataURL(event.target.files[0]);
+    }
+
+    
+  </script>
+
+  <!-- Carga del componente personalizado -->
+  <script src="componentes/componente_editar_prefil.js" type="module"></script>
+  <script src="componentes/componente_barra_navegacion.js" type="module"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Eventos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    #modal {
+      animation: slideUp 1.5s ease-out forwards;
+    }
+    @keyframes slideUp {
+      from {
+        background-position: bottom;
+        opacity: 0;
+      }
+      to {
+        background-position: center;
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 min-h-screen p-6 flex flex-col items-center space-y-4">
+
+  <!-- Botón Crear Evento -->
+  <button onclick="document.getElementById('modal').classList.remove('hidden')" class="fixed bottom-6 right-6 sm:static sm:self-end bg-blue-600 text-white px-6 py-3 rounded-full shadow-lg hover:bg-blue-700 transition duration-200 font-semibold z-50">
+    ➕ Crear Evento
+  </button>
+
+  <!-- Modal Crear Evento con animación de imagen de fondo desde abajo -->
+  <div id="modal" class="fixed inset-0 bg-cover bg-center flex items-center justify-center hidden z-50" style="background-image: url('recursos/imagenes/campo-de-hierba-verde-de-fondo.jpg');">
+    <div class="bg-white bg-opacity-95 p-6 rounded-2xl shadow-2xl w-[90%] sm:w-[70%] lg:w-[40%] relative">
+      <button onclick="document.getElementById('modal').classList.add('hidden')" class="absolute top-4 right-4 text-gray-500 hover:text-red-500">✖</button>
+      <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">📅 Crear Nuevo Evento</h2>
+      <form class="space-y-5">
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">Título del evento</label>
+          <input type="text" placeholder="Ej: Torneo de Fútbol" class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">Descripción</label>
+          <textarea rows="3" placeholder="Agrega detalles del evento..." class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        </div>
+        <div class="flex flex-col sm:flex-row sm:space-x-4">
+          <div class="flex-1">
+            <label class="block text-sm font-semibold text-gray-700 mb-1">Fecha</label>
+            <input type="date" class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+          <div class="flex-1">
+            <label class="block text-sm font-semibold text-gray-700 mb-1">Hora</label>
+            <input type="time" class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">Ubicación</label>
+          <input type="text" placeholder="Campo Central, Madrid" class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">¿Evento público?</label>
+          <select class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option>Sí</option>
+            <option>No</option>
+          </select>
+        </div>
+        <div class="pt-4">
+          <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-xl hover:bg-blue-700 transition duration-200 font-semibold">
+            Crear Evento
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Contenedor de lista vertical scrollable -->
+  <div class="max-w-lg w-full space-y-6 overflow-y-auto" style="max-height: 90vh;">
+    <!-- Evento 1 -->
+    <section class="bg-white p-6 rounded-xl shadow-lg">
+      <h3 class="text-xl font-bold text-gray-800">🏟️ Campo Central</h3>
+      <p class="text-gray-600 mt-1">📍 Ubicación: Madrid</p>
+      <p class="text-gray-600">👥 Participantes: 12 / 16</p>
+      <p class="text-gray-600">💶 Precio por participante: 5€</p>
+      <p class="text-sm text-gray-500 mt-3">Reserva tu plaza antes de que se complete el aforo. ¡No te lo pierdas!</p>
+      <button class="mt-4 w-full bg-green-600 text-white py-2 rounded-xl hover:bg-green-700 transition duration-200 font-semibold">
+        ✅ Suscribirse al evento
+      </button>
+    </section>
+  </div>
+
+</body>
+</html>

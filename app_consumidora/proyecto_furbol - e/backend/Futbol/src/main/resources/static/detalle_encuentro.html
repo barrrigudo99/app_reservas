@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Encuentro - Móvil</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/detalle_encuentro.css">
+</head>
+
+<body class="bg-gray-50">
+    <main class="main-content">
+    <!-- Componente de la barra de navegación -->
+    <custom-navbar></custom-navbar>
+    <!-- Header con imagen -->
+    <header class="relative w-full h-[150px] overflow-hidden">
+        <img src="recursos/imagenes/foto_balon.jpg" alt="Balón de fútbol" class="w-full h-full object-cover" loading="lazy">
+    </header>
+
+    <!-- Navegación -->
+    <nav class="sticky top-0 z-50 bg-white shadow-md" role="navigation" aria-label="Navegación principal">
+        <div class="flex justify-center space-x-2 p-2">
+            <button onclick="showContent('info')" class="active px-3 py-1.5 text-sm font-semibold text-gray-700 hover:text-blue-600 transition-colors duration-200 border-b-2 border-transparent active:border-blue-500 active:text-blue-600" aria-selected="true">
+                INFO
+            </button>
+            <button onclick="showContent('comments')" class="px-3 py-1.5 text-sm font-semibold text-gray-700 hover:text-blue-600 transition-colors duration-200 border-b-2 border-transparent active:border-blue-500 active:text-blue-600">
+                COMENTARIOS
+            </button>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="container mx-auto px-3 py-4">
+        <!-- Sección de Información -->
+        <section id="info" class="content active space-y-4" aria-labelledby="info-title">
+            <h2 id="info-title" class="text-xl font-bold text-gray-800">Información del Campo</h2>
+            
+            <!-- Contenedor de información -->
+            <div class="info-container">
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">Nombre del campo</h3>
+                <p class="text-blue-600 hover:text-blue-700 transition-colors duration-200">
+                    <a href="#">Dirección del campo</a>
+                </p>
+                <div class="flex flex-wrap gap-3 mt-3">
+                    <span class="text-base font-semibold text-gray-700 precio">0.00€</span>
+                </div>
+            </div>
+
+            <!-- MIO -->
+            <!-- Contenedor de botones de fechas -->
+            
+
+            <!-- Componente de disponibilidad -->
+            <componente-disponibilidad></componente-disponibilidad>
+
+            <!-- Mapa -->
+            <div class="bg-white rounded-lg shadow-md p-4">
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">Ubicación</h3>
+                <div class="w-full h-[200px] rounded-lg overflow-hidden">
+                    <iframe 
+                        id="mapa-ubicacion"
+                        class="w-full h-full"
+                        allowfullscreen=""
+                        loading="lazy"
+                        title="Ubicación del campo de fútbol">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Comentarios -->
+        <section id="comments" class="content hidden space-y-4" aria-labelledby="comments-title">
+            <h2 id="comments-title" class="text-xl font-bold text-gray-800">Comentarios</h2>
+            <div class="bg-white rounded-lg shadow-md p-4">
+                <p class="text-sm text-gray-600">Comentarios sobre el encuentro...</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/detalle_encuentro.js"></script>
+    <script src="componentes/componente_disponibilidad.js"></script>
+    <script src="componentes/componente_barra_navegacion.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const enlace = document.querySelector('#info .info-container p a');
+          const iframe = document.getElementById('mapa-ubicacion');
+        
+          if (!enlace || !iframe) return;
+        
+          const actualizarMapa = () => {
+            const texto = enlace.textContent.trim();
+            if (texto && texto !== 'Dirección del campo') {
+              const url = `https://www.google.com/maps?q=${encodeURIComponent(texto)}&output=embed`;
+              iframe.src = url;
+            }
+          };
+        
+          // Llamar una vez al cargar
+          actualizarMapa();
+        
+          // Observar cambios en el texto del <a> por si se actualiza dinámicamente
+          const observer = new MutationObserver(actualizarMapa);
+          observer.observe(enlace, { childList: true, characterData: true, subtree: true });
+        });
+    </script>
+    </main>
+</body>
+</html>
